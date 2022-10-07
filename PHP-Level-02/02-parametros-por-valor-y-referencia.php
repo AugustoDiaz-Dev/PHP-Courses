@@ -16,6 +16,8 @@ $string .= ' y algo más.';
 $str = 'Esto es una cadena, ';
 agregar($str);
 echo $str."<br/>"; // Escribe 'Esto es una cadena, '
+
+
 function agregarporreferencia(&$str) {
 // Paso por referencia del parámetro.
 $str .= ' y algo más.';
