@@ -19,12 +19,12 @@ echo cuadrado (5); //Escribe: 25
 
 <?php
 function numeros() {
-return array (0,1,2,3);
+return array (0, 1, 2, 3);
 }
-list ($cero, $uno, dos, $tres) = numeros();
-echo ($cero.‟,‟);
-echo ($uno.‟,‟);
-echo ($dos.‟,‟);
+list ($cero, $uno, $dos, $tres) = numeros();
+echo ($cero.",");
+echo ($uno.",");
+echo ($dos.",");
 echo ($tres);
 ?>
     

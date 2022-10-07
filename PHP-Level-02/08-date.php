@@ -15,11 +15,11 @@ Echo "Hoy es: ".date("d/m/Y");
 echo "<br/>";
 if ($prueba < "2020/11/01")
 {
-echo "Sitio web en mantenimiento hasta el 01/11/2020";
+echo "Sitio web en mantenimiento hasta el 01/11/2023";
 }
 else
 {
-echo "Bienvenido a nuestro sitio!";
+echo "¡Bienvenido a nuestro sitio!";
 }
 ?>
 
@@ -51,7 +51,7 @@ echo ("Segundos: " . $fecha["seconds"]."<br/>");
 <h2>funcion date_default_timezone_set()</h2>
 
 <?php
-date_default_timezone_set(“America/Argentina/Buenos_Aires”);
+date_default_timezone_set("America/Argentina/Buenos_Aires");
 echo "<p>".date('h:m:i')."</p>";
 ?>
 

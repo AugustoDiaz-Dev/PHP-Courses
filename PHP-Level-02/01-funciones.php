@@ -9,18 +9,17 @@
 <body>
 
 <?php
-function mifuncion() {
-    instrucciones;
-} // Sintaxis
+    # Sintaxis
+// function mifuncion() {
+//     instrucciones;
+// }
 
-<?php
 function producto($num1, $num2) {
     $producto = $num1 * $num2;
-    return $producto;
+    echo $producto;
 }
+producto(10, 5);
 ?>
-
-    
 
 </body>
 </html>
