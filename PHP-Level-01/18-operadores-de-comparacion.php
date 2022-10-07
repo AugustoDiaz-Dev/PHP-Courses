@@ -27,7 +27,7 @@ echo $b <= $c,"<br>"; //imprime 1 porque es verdadero
    echo ($a == $b) && ($c > $b),"<br>"; //Falso, muestra un espacio en blanco. Ambos deben ser verdaderos para ser True.
    echo ($a == $b) || ($b == $c),"<br>";//Verdadero, porque al menos uno lo es muestra un 1.
    echo !($b <= $c),"<br>";
-?>s
+?>
     
 </body>
 </html>

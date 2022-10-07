@@ -9,13 +9,13 @@
 <body>
 
 <?php
-$calculo1=12/4; // 12/4=3
-$calculo2=3*2; // 3*2=6
-$calculo3=20%3; // 20/3=6, resto=2
-echo $calculo1+$calculo2-$calculo3;
+$calculo1 = 12 / 4; // 12/4=3
+$calculo2 = 3 * 2; // 3*2=6
+$calculo3 = 20 % 3; // 20/3=6, resto=2
+echo $calculo1 + $calculo2 - $calculo3;
 ?>
 <?php
-$numero=24;
+$numero= 24;
 echo $numero."<br/>";
 echo $numero++; // Lo muestra primero y luego lo incrementa, por ello es 24
 echo "<br/>";
@@ -33,7 +33,7 @@ echo "<br/>";
 
 <?php
 $uno = 1;
-$dos = 10%8; // 10/8=1, en lo que el resto es 2
+$dos = 10 % 8; // 10/8=1, en lo que el resto es 2
 $tres = 3;
 $cuatro = 4;
 $uno++; // la variable $uno ahora vale 2, ya que 1+1=2
