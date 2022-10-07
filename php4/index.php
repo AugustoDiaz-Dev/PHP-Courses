@@ -50,9 +50,8 @@ declare(strict_types=1);
     var_dump(is_nan($exponential));
     var_dump(is_nan(log(-1)));
 
-
-
     # string
+    // With double quotes you can have variables, with single quotes no.
     echo '<br/>'. '--- String ---'.'<br/>';
     $name = 'Augusto';
 
@@ -64,11 +63,68 @@ declare(strict_types=1);
     echo gettype($completed).'<br/>';
     var_dump($price).'<br/>';
 
+    $my_variable = 1;
+    // Heredoc ""
+    // Varibles will be printed
+    $text = <<<TEXT
+    Line 1 $my_variable
+    Line 2
+    Line 3
+    TEXT;
+    echo nl2br($text).'<br/>';
+
+    // Nowdoc ''
+    // Varibles won't be printed
+    $text = <<<'TEXT'
+    Line 1 $my_variable
+    Line 2
+    Line 3
+    TEXT;
+
+    echo nl2br($text).'<br/>';
+
 # 4 Compound Types
     # array
     echo '--- Array ---'.'<br/>';
     $items = [1,2,3, 'something', true];
     print_r($items).'<br/>';
+    $programmingLanguages = ['PHP', 'Java', 'Python'];
+    $programmingLanguages1 = array('JavaScript', 'Rust', 'C++');
+    echo $programmingLanguages[0].'<br/>';
+    var_dump(isset($programmingLanguages[0])).'<br/>'; // Returns boolean
+    echo '<pre>';
+    print_r($programmingLanguages).'<br/>';
+    echo '</pre>';
+    echo count($programmingLanguages).'<br/>';
+    array_push($programmingLanguages, 'C++', 'C', 'Go');
+
+    // custom keys
+    $programmingLanguages2 = [
+        'php' => '8.0',
+        'python' => '3.9',
+        'javascript' => [
+            'creator' => 'Brendan Eich',
+            'extension' => 'none',
+            'website' => 'none',
+            'isOpenSource' => '1',
+            'versions' => [
+                ['version' => 'ES1', 'release' => '1997'],
+                ['version' => 'ES2', 'release' => '1998'],
+            ],
+        ]
+    ];
+    echo '<pre>';
+    print_r($programmingLanguages2).'<br/>';
+    echo '</pre>';
+    echo $programmingLanguages2['php'].'<br/>';
+
+    echo $programmingLanguages2['javascript']['website'].'<br/>';
+    echo $programmingLanguages2['javascript']['versions'][0]['release'].'<br/>';
+
+    $array = ['a' => 1, 'b' => null];
+    var_dump(array_key_exists('b', $array)).'<br/>';
+    var_dump(isset($array['b'])).'<br/>';
+
     # object
     # callable
     # interable
@@ -76,6 +132,11 @@ declare(strict_types=1);
 #2 Special Types
     # resource
     # null
+    // null constant 
+    $null = null;
+    var_dump($null === null).'<br/>';
+    echo $null.'<br/>';
+
 
     // Type cohersion. PHP adapt the types dynamically
 function sum(int $x, int $y) {
